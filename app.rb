@@ -16,10 +16,11 @@ class Greeter < Sinatra::Base
     p params
     @name = params[:name]
     @bday = Birthday.day_counter(params[:bday].split("-"))
+    p @bday
     erb(:birthday) 
   end 
 
 # start the server if ruby file executed directly
-run! if app_file ==$0
+# run! if app_file ==$0
 
 end
